@@ -1,0 +1,61 @@
+gtk-vector-screenshot (0.3.3-1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 16 May 2022 20:20:15 +0800
+
+gtk-vector-screenshot (0.3.3-1) unstable; urgency=medium
+
+  * Drop gtk2 dependency (Closes: 967479)
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 28 Aug 2020 10:09:51 +0200
+
+gtk-vector-screenshot (0.3.2.1-2) unstable; urgency=medium
+
+  * Install GTK modules into MA directories. Closes: 693050
+    Thanks to Iain for the patch, and Andreas Henriksson for the nudge.
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 21 Sep 2015 08:52:07 +0200
+
+gtk-vector-screenshot (0.3.2.1-1) unstable; urgency=low
+
+  * Fix "FTBFS: ld: clientwin.o: undefined reference to symbol
+    'XGetWindowAttributes'" (Closes: #713542)
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 22 Jun 2013 22:16:29 +0200
+
+gtk-vector-screenshot (0.3.2-1) unstable; urgency=low
+
+  * New upstream version
+    + The BadWindow error situation was futher improved by Michel Dänzer.
+      (Closes: # 645509)
+
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 17 Oct 2011 19:45:09 +0200
+
+gtk-vector-screenshot (0.3.1-1) unstable; urgency=low
+
+  * New upstream version
+    + Prevents BadWindow X-Protocol errors in random application. Thanks to
+      Petr Gajdůšek for reporting, analyzing and fixing the bug.  (Closes:
+      #639328)
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 27 Aug 2011 10:58:13 +0200
+
+gtk-vector-screenshot (0.3-1) unstable; urgency=low
+
+  * New upstream release, works with metacity now. 
+
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 10 Jul 2011 12:24:50 +0200
+
+gtk-vector-screenshot (0.2-2) unstable; urgency=low
+
+  * Duh, completely forgot about the Build-Depends (Closes: #632120)
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 30 Jun 2011 10:27:31 +0200
+
+gtk-vector-screenshot (0.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #631324)
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 24 Jun 2011 16:06:13 +0200

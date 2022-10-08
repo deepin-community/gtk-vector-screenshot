@@ -1,0 +1,78 @@
+gtk vector screenshot module
+============================
+
+© 2011 Joachim Breitner <mail@joachim-breitner.de>
+
+This gtk module allows you to take a screenshot of a running gtk-3 application
+as a vector image, with fully scalable graphics and selectable text. It
+supports rendering the application to PDF, SVG and PostScript.
+
+Installation
+============
+
+To install the module, use the usual sequence:
+
+./configure --prefix=/usr
+make
+sudo make install
+
+And then ensure that the environment variable GTK_MODULES includes
+gtk-vector-screenshot, e.g. in ~/.xsessionrc or by putting the file
+52load-gtk-vector-screenshot-gtk-module into /etc/X11/Xsession.d.
+
+If you do not install into /usr, you will have set GTK_PATH or pass the full
+path of gtk-vector-screencast.so via GTK_MODULES when invoking the application.
+
+Usage
+=====
+
+You need to ensure that the gtk-vector-screenshot module is loaded by the
+application, see section Installation. Distribution packages should take care
+of this, but you might need to login again after you install the package.
+
+Then run take-vector-screenshot, press the button, click on the window and then
+you can select the filename to save the image under.
+
+You can watch a screencast of the program in action at
+http://www.joachim-breitner.de/blog/archives/494-Better-PDF-screenshots-with-gtk-3.html
+
+Protocol
+========
+
+The module is loaded by every application, and only activated using the
+take-vector-screenshot program. The protocol is simple and based on X window
+properties and X client messages: The gtk module sets the GTK_VECTOR_SCREENSHOT
+property for each top-level X window to some arbitrary value (currently
+"supported"). The control application sends an XClientMessage event to that
+window of type GTK_VECTOR_SCREENSHOT and with event.window set to the receiving
+window.
+
+Development
+===========
+
+The latest release can be found on 
+http://www.joachim-breitner.de/archive/gtk-vector-screenshot/
+
+For the list of changes, see ChangeLog.
+
+The code is hosted on gitorious.org:
+https://gitorious.org/gtk-vector-screenshot/gtk-vector-screenshot
+
+You can pull from the repository via
+git clone git://gitorious.org/gtk-vector-screenshot/gtk-vector-screenshot.git
+or if you are registered with gitorious, via
+git@gitorious.org:gtk-vector-screenshot/gtk-vector-screenshot.git
+
+Feel free to submit patches, but also feel free to contact me first with your
+ideas, in case I have different plans.
+
+BUGS and TODOs
+==============
+ * It only works with gtk3 applications.
+ * The screenshot is taken the moment you press Save in the file chooser
+   dialogue, not when you press the “Take vector screenshot” button.
+ * Make the preview widget behave more sensible with regard to resizes.
+ * Less hakish setting of the GTK_VECTOR_SCREENSHOT property.
+ * Fallback code without IPC for windows, as for version 0.2.
+ * Use GtkInvisible for the grab in take-vector-screenshot.c, as that is what
+   its meant for, it seems.

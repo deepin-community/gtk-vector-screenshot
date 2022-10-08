@@ -1,0 +1,9 @@
+# This file is sourced by Xsession(5), not executed.
+
+if [ -z "$GTK3_MODULES" ] ; then
+	GTK3_MODULES="gtk-vector-screenshot"
+else
+	GTK3_MODULES="$GTK3_MODULES:gtk-vector-screenshot"
+fi
+
+export GTK3_MODULES

@@ -1,0 +1,49 @@
+gtk-vector-screenshot (0.3.3)
+
+  * Drop the noop gtk2 module (used to quench a warning about missing gtk
+    module), set GTK3_MODULES instead.
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Sat, 22 Jun 2013 22:13:25 +0200
+
+gtk-vector-screenshot (0.3.2.1)
+
+  * Fix linking problem
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Sat, 22 Jun 2013 22:13:25 +0200
+
+gtk-vector-screenshot (0.3.2)
+
+  * The BadWindow error situation was futher improved by Michel Dänzer.
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Mon, 17 Oct 2011 19:37:46 +0200
+
+gtk-vector-screenshot (0.3.1)
+
+  * Petr Gajdůšek <gajdusek.petr@centrum.cz> reported, analyized and patched
+    an issue causing gtk application to crash with BadWindow errors when the
+    gtk-vector-screenshot module is loaded.
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Sat, 27 Aug 2011 10:55:43 +0200
+
+gtk-vector-screenshot (0.3)
+
+  * Uses code from xwininfo to reliably find the right X window, even with
+    window managers such as metacity.
+  * Smaller Save-As dialogue even with large application windows.
+    Help getting this dialogue right with regard to sizing and resizing would
+    be appreciated!
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Sun, 10 Jul 2011 12:18:18 +0200
+
+gtk-vector-screenshot (0.2)
+
+  * Now with separate control application take-vector-screenshot and
+    unobstrusive module that can be loaded permanently.
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Fri, 24 Jun 2011 16:06:13 +0200
+
+gtk-vector-screenshot (0.1)
+
+  * Initial release.
+
+ -- Joachim Breitner <mail@joachim-breitner.de>  Mon, 20 Jun 2011 14:50:42 +0200
